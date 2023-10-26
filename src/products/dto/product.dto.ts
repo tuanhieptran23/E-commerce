@@ -2,7 +2,8 @@ import { ApiProperty } from '@nestjs/swagger';
 
 export class ProductDTO {
   @ApiProperty({
-    example: 'https://cdn.vjshop.vn/tin-tuc/8-quy-tac-chup-anh-san-pham-an-tuong/8-quy-tac-chup-anh-san-pham-an-tuong-3.png',
+    example:
+      'https://cdn.vjshop.vn/tin-tuc/8-quy-tac-chup-anh-san-pham-an-tuong/8-quy-tac-chup-anh-san-pham-an-tuong-3.png',
     description: 'Image URL',
   })
   image: string;

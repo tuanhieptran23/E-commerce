@@ -9,7 +9,7 @@ async function bootstrap() {
     .setTitle('E-commerce API')
     .setDescription('API for managing product data')
     .setVersion('1.0')
-    .addTag('product')
+    .addTag('Product','User')
     .build();
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('api', app, document);
