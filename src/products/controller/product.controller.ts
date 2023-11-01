@@ -10,7 +10,6 @@ import { AuthGuard } from 'src/users/guard/user.guard';
 export class ProductController {
   constructor(private readonly productService: ProductService) {}
 
-  @UseGuards(AuthGuard)
   @Get()
   @ApiOperation({ summary: 'Get all products' })
   async findAll() {
@@ -23,18 +22,21 @@ export class ProductController {
     return this.productService.findById(id);
   }
 
+  @UseGuards(AuthGuard)
   @Post()
   @ApiOperation({ summary: 'Create a new product' }) 
   async create(@Body() ProductDTO: ProductDTO) {
     return this.productService.create(ProductDTO);
   }
 
+  @UseGuards(AuthGuard)
   @Put(':id')
   @ApiOperation({ summary: 'Update a product by ID' }) 
   async update(@Param('id') id: number, @Body() ProductDTO: ProductDTO) {
     return this.productService.update(id, ProductDTO);
   }
 
+  @UseGuards(AuthGuard)
   @Delete(':id')
   @ApiOperation({ summary: 'Delete a product by ID' }) 
   async delete(@Param('id') id: number) {
