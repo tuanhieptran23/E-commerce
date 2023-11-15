@@ -21,6 +21,13 @@ export class ProductDTO {
   description: string;
 
   @ApiProperty({
+    example: '2023-11-15',
+    description: 'Date added',
+  })
+  dateAdded: string; 
+
+
+  @ApiProperty({
     example: 100.0,
     description: 'Product price',
   })

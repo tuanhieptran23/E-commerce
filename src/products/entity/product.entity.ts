@@ -23,15 +23,13 @@ export class Product {
   @Column()
   count: number;
 
-  @CreateDateColumn({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
-  createdAt: Date; 
-
-  @UpdateDateColumn({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
-  updatedAt: Date; 
-
   @Column('json', { nullable: true }) 
   sizes: string[];
 
   @Column('json', { nullable: true }) 
   colors: string[];
+
+  @Column({ default: () => 'CURRENT_TIMESTAMP' })
+  dateAdded: string;
+   
 }
